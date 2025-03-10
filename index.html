@@ -7,10 +7,26 @@
         canvas {
             border: 1px solid black;
         }
+        #gameOver {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: none;
+        }
     </style>
 </head>
 <body>
     <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div id="gameOver">
+        <h1>Game Over</h1>
+        <p id="winnerText"></p>
+        <button onclick="resetGame()">Play Again</button>
+    </div>
     <script src="game.js"></script>
 </body>
 </html>
